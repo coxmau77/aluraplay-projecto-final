@@ -38,6 +38,14 @@
     cursor: pointer;
 }
 
+.superior__seccion__container {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+    overflow: auto;
+}
+
 footer {
     /* background-color: aqua; */
     display: flex;

@@ -103,7 +103,8 @@ body {
 /* MENU LATERAL */
 
 .menu__container {
-    background-color: var(--azul-oscuro);
+    /* background-color: var(--azul-oscuro); */
+    background-color: pink;
     font-size: 14px;
 }
 
@@ -287,7 +288,7 @@ body {
     /* ESTILOS DE LA SECCIÓN SUPERIOR */
 
     .superior__seccion__container {
-        border-top: var(--azul-medio) 1px solid;
+        /* border-top: var(--azul-medio) 1px solid; */
         border-bottom: var(--azul-medio) 1px solid;
         width: auto;
         left: 82px;
