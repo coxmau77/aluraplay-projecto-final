@@ -46,6 +46,76 @@
     overflow: auto;
 }
 
+/* menu lateral movile first*/
+.menu__container {
+    bottom: 0%;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    
+}
+.menu__lista {    
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+
+    li {
+        align-self: center;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+        }
+    }
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none;
+}
+/* /menu lateral movile first*/
+/* Seccion de videos */
+.videos__container {
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    gap: 1rem;      
+}
+.videos__item {
+    width: 300px;
+    height: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.146);
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.descripcion-video {
+    height: 25%;
+    display: flex;
+    padding: .6rem;
+    gap: 1rem;
+    align-items: center;
+    margin-top: .4em;
+
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.detalles__video {
+    text-align: start;
+    h3 {
+        margin-bottom: 1rem;
+    }
+}
+
 footer {
     /* background-color: aqua; */
     display: flex;
@@ -58,9 +128,89 @@ footer {
 
 
 /* Breakpoints  */
-@media (max-width: 834px){
+@media(max-width: 834px){
     .cabecera__buscar__item {
         display: none;
     }
 }
 
+@media(min-width: 834px) {
+    
+    .videos__container {
+        padding-left: 90px;
+    }
+
+    /* ESTILOS DO MENU LATERAL */
+    .menu__container {
+        bottom: 0%;
+        /* position: fixed; */
+        top: 80px;
+        left: 0px;
+        height: auto;
+        width: 80px;
+    }
+
+    .menu__lista  {
+        height: auto;
+        gap: 2rem;
+    }
+    
+    .menu__itens {
+        padding: 1rem;
+    }
+
+    .active {
+        border-radius: 0px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display:flex;
+    }
+
+    .menu__lista  {
+        height: auto;
+        padding: 20px 17px 20px 0px;
+        /* background-color: pink; */
+        gap: .2rem;
+        
+        .menu__itens {
+            flex-direction: row;
+            /* background-color: hotpink; */
+            gap: 1rem;
+            align-items: center;
+            padding: .4rem;
+        }
+    }
+
+    /* reordenar los items */
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    /* la propiedad order trabaja solo en elementos hijos, donde podremos ordenar su posicion, esta propiedad tiene su desventaja y es que no se recomienda si estas trabajando en la accesibilidad de tu sitio ya que un lector de pantalla lee el orden del html y no el que le damos con la propiedad order*/
+    .videojuegos {
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 1;
+    }
+
+    .videos__container {
+        padding-left: 250px;
+    }
+
+}
